@@ -76,8 +76,8 @@ async def pm_text(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://telegram.me/+ps2An00KwZYwNTRl>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"telegram.me/TeamHMT_Movie")]])
+         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/+t3doyjC_NAZjNTY1>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/+bDOmmqJXhDs2OTA1")]])
     )
     await bot.send_message(
         chat_id=LOG_CHANNEL,
@@ -133,7 +133,7 @@ async def next_page(bot, query):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
     else:
         btn = []
@@ -146,7 +146,7 @@ async def next_page(bot, query):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
     try:
         if settings['max_btn']:
@@ -362,7 +362,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
     else:
         btn = []
@@ -375,7 +375,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
 
     if offset != "":
@@ -540,7 +540,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
         btn.insert(0, [
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9"),
             InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
         ])
     else:
@@ -554,7 +554,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
         
     offset = 0
@@ -1171,7 +1171,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://telegram.me/TeamHMT_Movies")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+ERLyWoXQWtw1ZjE1")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1196,7 +1196,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://telegram.me/TeamHMT_Movies")
+                 InlineKeyboardButton("Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ Lɪɴᴋ", url="https://t.me/+ERLyWoXQWtw1ZjE1")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1249,7 +1249,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('Eᴀʀɴ Mᴏɴᴇʏ 💸', callback_data="shortlink_info"),
+                    InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9"),
                     InlineKeyboardButton('⌬ Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
@@ -1524,7 +1524,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/TeamHMT_Bot")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="telegram.me/gadearjun")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1688,7 +1688,7 @@ async def auto_filter(client, msg, spoll=False):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
     else:
         btn = []
@@ -1701,7 +1701,7 @@ async def auto_filter(client, msg, spoll=False):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("New movie", url=f"https://t.me/+rI-nXoqIzkswYjA9")
         ])
     if offset != "":
         req = message.from_user.id if message.from_user else 0
