@@ -467,7 +467,7 @@ async def get_shortlink(chat_id, link):
     else:
         URL = SHORTLINK_URL
         API = SHORTLINK_API
-    if URL.startswith("omegalinks.in") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
+    if URL.startswith("omegalinks.in") or URL.startswith("omegalinks.in") or URL.startswith("omegalinks.in"):
         URL = SHORTLINK_URL
         API = SHORTLINK_API
     if URL == "api.omegalinks.in":
